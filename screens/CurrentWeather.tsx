@@ -23,7 +23,7 @@ const CurrentWeather = () => {
         
       </View>
       <RowText
-          messageOne={"It's sunny"}
+          messageOne={"It's sunrny"}
           messageTwo={weatherType['Thunderstorm'].message}
           containerStyles={bodyWrapper}
           messageOneStyles={description}
