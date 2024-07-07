@@ -1,4 +1,4 @@
-export const weatherType = {
+export const weatherType:any = {
     Thunderstorm: {
         icon:"zap",
         message:"It could get noisy",

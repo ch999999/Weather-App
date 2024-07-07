@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { ActivityIndicator, View,StyleSheet } from 'react-native'
 import Tabs from '@/components/Tabs'
 import * as Location from 'expo-location'
+import ErrorItem from '@/components/ErrorItem'
 
 import { useGetWeather } from '@/hooks/useGetWeather'
 //api.openweathermap.org/data/2.5/forecast?lat={lat}&lon={lon}&appid={API key}
@@ -15,7 +16,7 @@ const App = () => {
     return (
       
         <NavigationContainer independent={true}>
-          <Tabs/>
+          <Tabs weather={weather}/>
         </NavigationContainer>
       )
     
@@ -24,7 +25,7 @@ const App = () => {
   
     return (
       <View style={styles.container}>
-        <ActivityIndicator size={"large"} color={"blue"}/>
+        {loading ? <ActivityIndicator size={"large"} color={"blue"}/> : <ErrorItem/>}
       </View>
     )
   
